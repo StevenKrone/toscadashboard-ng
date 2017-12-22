@@ -7,6 +7,7 @@ import {Object_Tosca_generic} from '../../-class/object_generic';
 import {TestCaseBundle} from '../../-class/testcasebundle';
 import {execlist_wtestlog} from '../../-class/execlist_wtestlog';
 
+import { TestCaseObject } from '../../-class/testcaseobject';
 
 
 
@@ -17,24 +18,29 @@ import {execlist_wtestlog} from '../../-class/execlist_wtestlog';
 })
 export class TestcaseobjectComponent implements OnInit {
 
-  @Input() UniqueId: string;
+  @Input() UniqueId: Object_Tosca_generic;
 
   constructor(
     private toscaService: ToscaapiService
   ) { }
 
-  object: Object_Tosca_generic;
+  //object: Object_Tosca_generic;
 
-  ondemand_object = '';
+  visible: boolean;
+
+  ondemand_object: TestCaseObject;
 
   ngOnInit() {
     //this.toscaService.getObject().subscribe(data => this.object = data);
   }
 
   load1() {
-    this.ondemand_object = "Clicked"!
     this.toscaService.getObject2(this.UniqueId).subscribe(data => this.ondemand_object = data);
-    //this.ondemand_object = "Worked!"!
+  }
+
+  hide(){
+    this.visible = !this.visible;
+
   }
 
   

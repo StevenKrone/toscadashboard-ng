@@ -1,8 +1,43 @@
-<div style="border-style:solid; margin:15px; border-color:green;">
+<div class="container" style="border-style:solid; margin:15px; border-color:green;">
     <p>
       logobject works!
     </p>
     
     {{UniqueId | json}}
+  
+    
+    <button (click)="load1()">Load logobject</button>
+    <button (click)="hide()">
+      <span *ngIf="visible">Hide</span>
+      <span *ngIf="!visible">Show</span> 
+      logobject
+    </button>
+    
+    <div *ngIf="visible">
+
+
+Test Case Name: {{ondemand_object.Attributes[19].Value | json}}
+<br/>
+UniqueId: {{ondemand_object.UniqueId}}
+<br/> 
+TypeName: {{ondemand_object.TypeName}}
+<br/>
+
+<br/>
+
+
+Attributes
+<div *ngFor="let attribute of ondemand_object.Attributes">
+  {{attribute | json}}
+</div>
+<br/>
+
+TestConfigurationParameters
+<div *ngFor="let testconfig of ondemand_object.TestConfigurationParameters">
+  {{testconfig | json}}
+</div>
+
+    </div>
+    
   
 </div>

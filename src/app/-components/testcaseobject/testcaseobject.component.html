@@ -1,5 +1,5 @@
 
-<div style="border-style:dotted; margin:15px; border-color:blue;">
+<div class=".col-md-4" style="border-style:dotted; margin:15px; border-color:blue;">
 <p>
   testcaseobject works!
 </p>
@@ -7,7 +7,35 @@
 {{UniqueId | json}}
 
 <button (click)="load1()">Load testcaseobject</button>
+<button (click)="hide()">
+  <span *ngIf="visible">Hide</span>
+  <span *ngIf="!visible">Show</span> 
+  testcaseobject
+</button>
 
-{{ondemand_object}}
+<div *ngIf="visible">
+
+Test Case Name: {{ondemand_object.Attributes[19].Value | json}}
+<br/>
+UniqueId: {{ondemand_object.UniqueId}}
+<br/> 
+TypeName: {{ondemand_object.TypeName}}
+<br/>
+
+<br/>
+
+
+Attributes
+<div *ngFor="let attribute of ondemand_object.Attributes">
+  {{attribute | json}}
+</div>
+<br/>
+
+TestConfigurationParameter
+<div *ngFor="let testconfig of ondemand_object.TestConfigurationParameters">
+  {{testconfig | json}}
+</div>
+
+</div>
 
 </div>
