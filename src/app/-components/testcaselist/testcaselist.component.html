@@ -1,0 +1,26 @@
+
+<h1>Execution List: 39e3256a-55af-759e-757b-71ad570f0bb6</h1>
+<ul>
+  <div *ngFor="let testcasebundle of execlist; let i = index">
+    <h2>TestCase Number {{i}}</h2>
+
+    <app-testcaseobject [UniqueId]="testcasebundle[0]"></app-testcaseobject>
+    <app-logobject [UniqueId]="testcasebundle[1]"></app-logobject>
+
+    <br/>
+
+  </div>
+</ul>
+
+<!-- 
+
+{{entry | json}}
+
+<ul>
+<li *ngFor="let TestCaseObject of testcasebundle">
+Sub-Object: {{TestCaseObject | json}}
+
+</li>
+</ul>
+
+-->
