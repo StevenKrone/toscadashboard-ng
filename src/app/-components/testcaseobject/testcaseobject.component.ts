@@ -27,6 +27,8 @@ export class TestcaseobjectComponent implements OnInit {
   //object: Object_Tosca_generic;
 
   visible: boolean;
+  visibleAttributes: boolean;
+  visibleParameters: boolean;
 
   ondemand_object: TestCaseObject;
 
@@ -40,6 +42,16 @@ export class TestcaseobjectComponent implements OnInit {
 
   hide(){
     this.visible = !this.visible;
+
+  }
+
+  hideAtt(){
+    this.visibleAttributes = !this.visibleAttributes;
+
+  }
+
+  hideParam(){
+    this.visibleParameters = !this.visibleParameters;
 
   }
 

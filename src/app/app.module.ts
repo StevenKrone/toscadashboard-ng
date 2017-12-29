@@ -9,7 +9,7 @@ import { ToscaapiService} from './-services/toscaapi.service';
 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -30,7 +30,7 @@ import { LogobjectComponent } from './-components/logobject/logobject.component'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, MatCheckboxModule, MatCardModule,
     HttpModule, HttpClientModule
   ],
   providers: [ToscaapiService],

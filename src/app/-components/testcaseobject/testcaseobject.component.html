@@ -1,17 +1,20 @@
 
-<div class=".col-md-4" style="border-style:dotted; margin:15px; border-color:blue;">
-<p>
-  testcaseobject works!
-</p>
+<div class=".col-md-4" style="border-style:dotted; margin:15px; padding:15px; border-color:blue;">
+<h2>
+  Test Case Object 
+</h2>
 
 {{UniqueId | json}}
 
-<button (click)="load1()">Load testcaseobject</button>
-<button (click)="hide()">
+
+<mat-card-actions>
+<button mat-button (click)="load1()">Load testcaseobject</button>
+<button mat-button (click)="hide()">
   <span *ngIf="visible">Hide</span>
   <span *ngIf="!visible">Show</span> 
   testcaseobject
 </button>
+</mat-card-actions>
 
 <div *ngIf="visible">
 
@@ -24,18 +27,41 @@ TypeName: {{ondemand_object.TypeName}}
 
 <br/>
 
+<mat-card-actions>
+    <button mat-button (click)="hideAtt()">
+        <span *ngIf="visibleAttributes">Hide</span>
+        <span *ngIf="!visibleAttributes">Show</span> 
+        attributes
+      </button>
 
+      <button mat-button (click)="hideParam()">
+          <span *ngIf="visibleParameters">Hide</span>
+          <span *ngIf="!visibleParameters">Show</span> 
+          TCP
+        </button>
+
+</mat-card-actions>
+
+
+<div *ngIf="visibleAttributes">
 Attributes
 <div *ngFor="let attribute of ondemand_object.Attributes">
   {{attribute | json}}
 </div>
 <br/>
 
+</div>
+
+
+
+<div *ngIf="visibleParameters">
 TestConfigurationParameter
 <div *ngFor="let testconfig of ondemand_object.TestConfigurationParameters">
   {{testconfig | json}}
 </div>
-
 </div>
 
 </div>
+
+</div>
+

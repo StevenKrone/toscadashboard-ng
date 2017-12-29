@@ -22,10 +22,12 @@ export class TestcaselistComponent implements OnInit {
 
   object: Object_Tosca_generic;
   execlist: execlist_wtestlog;
+  unqId: string = '39e3256a-55af-759e-757b-71ad570f0bb6';
+
 
   ngOnInit() {
     //this.toscaService.getObject().subscribe(data => this.object = data);
-    this.toscaService.getExecutionListWithTestCases().subscribe(data => this.execlist = data);
+    this.toscaService.getExecutionListWithTestCases2(this.unqId).subscribe(data => this.execlist = data);
     
   }
 

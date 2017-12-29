@@ -26,6 +26,8 @@ export class LogobjectComponent implements OnInit {
   }
 
   visible: boolean;
+  visibleAttributes: boolean;
+  visibleParameters: boolean;
   
   ondemand_object: Object_ExecutionTestCaseLog ;
 
@@ -35,6 +37,16 @@ export class LogobjectComponent implements OnInit {
 
   hide(){
     this.visible = !this.visible;
+
+  }
+
+  hideAtt(){
+    this.visibleAttributes = !this.visibleAttributes;
+
+  }
+
+  hideParam(){
+    this.visibleParameters = !this.visibleParameters;
 
   }
 
