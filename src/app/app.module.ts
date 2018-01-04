@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { TestcaselistComponent } from './-components/testcaselist/testcaselist.component';
 import { TestcaseobjectComponent } from './-components/testcaseobject/testcaseobject.component';
 import { LogobjectComponent } from './-components/logobject/logobject.component';
+import { ProjectselectComponent } from './-components/projectselect/projectselect.component';
 
 
 
@@ -25,7 +26,8 @@ import { LogobjectComponent } from './-components/logobject/logobject.component'
     AppComponent,
     TestcaselistComponent,
     TestcaseobjectComponent,
-    LogobjectComponent
+    LogobjectComponent,
+    ProjectselectComponent
   ],
   imports: [
     BrowserModule,

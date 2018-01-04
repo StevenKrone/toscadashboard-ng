@@ -62,6 +62,20 @@ export class ToscaapiService {
   }
 
 
+  getChildItems(unqId: string){
+    
+        var con = parseInt(unqId);
+        //var unqId = obj.UniqueId;    
+        //var url = 'http://usalntosdbp01/Rest/ToscaCommander/ToscaStagingDB/object/39e34a80-7b62-0c76-b111-eb7830121572';
+        var url = 'http://localhost:3000/api/objectitems/'  + unqId;
+        var headers = new Headers();
+        headers.append('Accept', 'text/json');
+        //headers.append('Authorization', 'Basic QWRtaW46QWRtaW4=');
+        return this.http.get(url, {headers: headers}).map((res:Response) => res.json());
+      }
+
+
+
 
 
 

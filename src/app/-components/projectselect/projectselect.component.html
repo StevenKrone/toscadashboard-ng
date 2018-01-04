@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+<div class="container" style="border-style:solid;">
+<h1>
+  Projects
+</h1>
+
+
+{{active_projectid}}
+
+
+<button mat-button (click)="opti()">Optifacts</button>
+<button mat-button (click)="optuitive()">Optuitive</button>
+
+<button mat-button (click)="load1()">Resend request</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div *ngFor="let unq of project_listofExecLists">
+  <div>
+    <!-- {{this.getObjectName(unq.UniqueId)}} -->
+    <button mat-button (click)="executionload(unq)">
+      ExecList: {{unq.UniqueId}}
+    </button>
+  </div>
+  
+</div>
+<br/>
+
+<h2>Selected ExecList:</h2> {{selectedExecutionID.UniqueId}} Revision {{selectedExecutionID.Revision}}
+
+
+
+<app-testcaselist [UniqueId]="selectedExecutionID"></app-testcaselist>
+
