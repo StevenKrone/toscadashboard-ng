@@ -42,12 +42,14 @@ export class ProjectselectComponent implements OnInit {
 
 
   optifacts_execfolder1_id: string = '39e320f4-73a4-c009-cc18-ed34ea1d13b3';
-  execfolder2: string = '';
+  optuitive_TZQA_execfolder2: string = '39e3cfb4-db8c-e35c-75a6-ad1666f1625a';
 
-  menuofProjects: string[] = [
-  this.optifacts_execfolder1_id,
-  this.execfolder2
-  ];
+
+  //If A SET OF PROJECTS is implemented
+  // menuofProjects: string[] = [
+  // this.optifacts_execfolder1_id,
+  // this.optuitive_TZQA_execfolder2
+  // ];
 
   opti(){
     this.active_projectid = this.optifacts_execfolder1_id;
@@ -55,7 +57,7 @@ export class ProjectselectComponent implements OnInit {
   }
 
   optuitive(){
-    this.active_projectid = this.execfolder2;
+    this.active_projectid = this.optuitive_TZQA_execfolder2;
     this.load1();
   }
 

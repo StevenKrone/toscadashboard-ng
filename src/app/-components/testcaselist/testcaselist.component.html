@@ -51,9 +51,12 @@
   <div *ngFor="let testcasebundle of execlist; let i = index">
 
       <mat-card style="width:1000px; margin:auto;">
-    <mat-card-title><h2>TestCase Number {{i}}</h2></mat-card-title>
+    <mat-card-title><h3>TestCase Number {{i}}</h3></mat-card-title>
 
+    
     <app-logobject [UniqueId]="testcasebundle[0]"></app-logobject>
+
+    
     <app-testcaseobject [UniqueId]="testcasebundle[1]"></app-testcaseobject>
       </mat-card>
 
